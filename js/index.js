@@ -24,5 +24,20 @@ function appendLiElement(listId, LiElement) {
 let newLi = createNewLiElement("healthy", "5", "Bananas");  // Opretter et nyt <li> element
 appendLiElement("list", newLi); 
 
+//Task 3. Create a function that change or add the class attribute
+function ChangeOrAddClass(element, classValue){
+    if (element.hasAttribute('class ')){
+        (element.setAttribute('class', classValue));
+    } else{
+        element.setAttribute('class', classValue);
+    }
+}
 
+// Vælg et element
+let BananaElement = document.getElementById(5);
 
+// Test funktionen ved at ændre eller tilføje en class
+ChangeOrAddClass(BananaElement, "unheathy");
+
+// Test resultatet i konsollen
+console.log(BananaElement.className);  // For at se den ændrede klasse
