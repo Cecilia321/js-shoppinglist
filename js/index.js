@@ -96,3 +96,16 @@ function CountElements(listId){
 CountElements("listUnhealthy")
 CountElements("list")
 
+
+//opgave 7. Move a node
+function MoveAlleUnhealthy() {
+    const nodes = document.querySelectorAll("#list .unhealthy"); // Finder alle "unhealthy" elementer i listen list
+    const unhealthylist = document.getElementById("listUnhealthy"); // Finder mållisten
+
+    nodes.forEach(node => {
+        unhealthylist.appendChild(node); // Flytter hvert element til den nye liste
+    });
+}
+
+//tester opgave 7 
+MoveAlleUnhealthy()
