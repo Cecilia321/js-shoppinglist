@@ -83,3 +83,16 @@ function ChangeText(element, newtext){
 
 //tester opgave 5. - skifter orange ud med mango
 ChangeText(document.getElementById(6), "mango")
+
+
+//opgave 6 - Create a function that count all the li element at a specific list
+function CountElements(listId){
+    let numb = document.getElementById(listId).childElementCount; //vi henter listen og benytter ChildElementCount. man kan også benytte children.length; - The childElementCount property returns the number of child elements of an element.
+    console.log(numb)
+
+}
+
+//man kan nu se antallet af elementer i ul listen. i consollen
+CountElements("listUnhealthy")
+CountElements("list")
+
