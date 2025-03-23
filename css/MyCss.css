@@ -2,10 +2,10 @@
   color: #0091aa; }
 
 h2, h1 {
-  color: #be4a14; }
+  color: #000000; }
 
 ul {
-  background-color: #584f4d;
+  background-color: #000000;
   border: none;
   padding: 0;
   margin: 0; }
@@ -24,14 +24,14 @@ li {
   padding-top: 10px; }
 
 .unhealthy {
-  background-color: red;
+  background-color: rgb(244, 43, 66);
   color: #fff;
   text-shadow: 2px 2px 1px #914141;
   border-top: 1px solid #e99295;
   border-bottom: 1px solid #914141; }
 
 .healthy {
-  background-color: #6cc0ac;
+  background-color: #56ca6f;
   color: #fff;
   text-shadow: 2px 2px 1px #3b6a5e;
   border-top: 1px solid #7ee0c9;
