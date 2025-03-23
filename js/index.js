@@ -16,7 +16,7 @@ function createNewLiElement(className, idName, text) {
 //her tester jeg opgave 1 for at se om det bliver tilføjet til siden. 
 const body = document.body
 let test = createNewLiElement("test", "test", "test");  // Opretter et nyt <li> element
-body.append(test) 
+//body.append(test) 
 
 
 //Task 2. Create a function that append a Li element to a lis
@@ -102,8 +102,9 @@ function MoveAlleUnhealthy() {
     const nodes = document.querySelectorAll("#list .unhealthy"); // Finder alle "unhealthy" elementer i listen list
     const unhealthylist = document.getElementById("listUnhealthy"); // Finder mållisten
 
-    nodes.forEach(node => {
-        unhealthylist.appendChild(node); // Flytter hvert element til den nye liste
+    //laver en foreach for at gå igennem hele listen. (html DOM - NodeList - foreach)
+    nodes.forEach(function(node) {
+        return unhealthylist.appendChild(node); // Flytter hvert element til den nye liste
     });
 }
 
