@@ -70,3 +70,16 @@ function DeleteElement(element){
 
 //tester opgave 4, ved at slette bananas med id 5 
 DeleteElement(document.getElementById(5))
+
+
+//task 5. Create a function that change the text in a Li element
+function ChangeText(element, newtext){
+    if (element){
+        element.textContent = newtext; //ændre teksten i elementet - When you set the textContent property, all child nodes are removed and replaced by only one new text node.
+    }else {
+        console.error("Elementet findes ikke");
+    }
+}
+
+//tester opgave 5. - skifter orange ud med mango
+ChangeText(document.getElementById(6), "mango")
