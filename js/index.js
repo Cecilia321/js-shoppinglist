@@ -114,19 +114,31 @@ MoveAlleUnhealthy()
 //opgave 2 Add an EventListener so when you press the button then a new item is added to the shopping list with the text that is in the input field.
 
 //jeg laver her en eventlistener som virker når user klikker på knappen "addbutton"
-document.getElementById("addButton").addEventListener("click", function () {
-    let inputField = document.querySelector("#AddElement");  // Hent inputfeltet
-    let inputValue = inputField.value;  // Hent værdien fra inputfeltet
 
-    if (inputValue !== "") {  // Tjek om der er skrevet noget
-        let newLi = document.createElement("li"); // Opret nyt <li>-element
-        newLi.textContent = inputValue; // Sæt teksten til det, der blev skrevet i inputfeltet
 
-        document.querySelector("#list").appendChild(newLi); // Tilføj <li> til listen
+//opgave 3 //funktion + eventlistener som tilføjer
+function addItemToList() {
+    let text = document.getElementById("AddElement").value;  // Hent inputværdien
+    let id = document.getElementById("Id").value;  // Hent ID
+    let classHU = document.getElementById("classHU").value;  // Hent class ("healthy" eller "unhealthy")
 
-        inputField.value = ""; // Ryd inputfeltet
+    if (text !== "" && id !== "" && classHU !== "") {  // Sikrer at alle felter er udfyldt
+        let newLi = createNewLiElement(classHU, id, text);  // Opret <li>-element
+        let listId = classHU === "unhealthy" ? "listUnhealthy" : "list"; // Bestem listen
+
+        appendLiElement(listId, newLi); // Tilføj til den rigtige liste
+
+        // Nulstil inputfelterne
+        document.getElementById("AddElement").value = "";
+        document.getElementById("Id").value = "";
+        document.getElementById("classHU").value = "";
+    } else {
+        console.error("Udfyld alle felterne korrekt!");
     }
-});
+}
+
+// Brug funktionen i eventlisteneren
+document.getElementById("addButton").addEventListener("click", addItemToList);
 
 
 //knap som skrifter farven på baggrunden.
