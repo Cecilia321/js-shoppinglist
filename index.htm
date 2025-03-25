@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en-US">
 <head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Coding Template- Shoppinglist</title>
   <link rel="stylesheet" type="text/css" href="css/MyCss.css">
@@ -18,34 +19,29 @@
       <li id="3" class="healthy">Apples</li>
     </ul>
   </div>
-  <div>
+  <div class="mb-5">
     <h2>Shoppinglist UNHEALTHY</h2>
     
     <ul id="listUnhealthy">
     </ul>
   </div>
 
-  <h2>Tilføj til shoppingliste</h2>
-  <form action="" >
-    <div class="mb-3 mt-3">
-      <label for="className" class="form-label">Ithem</label>
-      <input type="className" class="form-control" id="className" placeholder="Enter Ithem" name="className">
+  <h2>Add ithem:</h2>
+  <div class="mb-5">
+      <input type="text" class="form-control" id="AddElement" placeholder="Enter Ithem" name="className">
+      <button id="addButton">Add Ithem</button>
     </div>
-
-    <div class="mb-3 mt-3">
-      <label for="idName" class="form-label">Ithem</label>
-      <input type="idName" class="form-control" id="idName" placeholder="Enter Id" name="idName">
-    </div>
-
-    <div class="mb-3 mt-3">
-      <label for="text" class="form-label">Ithem</label>
-      <input type="text" class="form-control" id="text" placeholder="Enter unhealhy or healthy" name="text">
-    </div>
-    <button id="addButton">Tilføj til liste</button>
+    
   </form>
 
-  <button onclick="testFunctions()">Test Funktionen</button>
-  
+
+<div class="mb-6 ">
+
+  <!--Til eventboks-->
+  <input id="textBox" type="text" />
+  <div id="output"></div>
+</div>
+
   <script src="js/index.js"></script> 
 </body>
 </html>

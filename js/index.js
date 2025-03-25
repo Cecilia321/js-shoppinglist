@@ -110,3 +110,45 @@ function MoveAlleUnhealthy() {
 
 //tester opgave 7 
 MoveAlleUnhealthy()
+
+//opgave 2 Add an EventListener so when you press the button then a new item is added to the shopping list with the text that is in the input field.
+
+//jeg laver her en eventlistener som virker når user klikker på knappen "addbutton"
+document.getElementById("addButton").addEventListener("click", function () {
+    let inputField = document.querySelector("#AddElement");  // Hent inputfeltet
+    let inputValue = inputField.value;  // Hent værdien fra inputfeltet
+
+    if (inputValue !== "") {  // Tjek om der er skrevet noget
+        let newLi = document.createElement("li"); // Opret nyt <li>-element
+        newLi.textContent = inputValue; // Sæt teksten til det, der blev skrevet i inputfeltet
+
+        document.querySelector("#list").appendChild(newLi); // Tilføj <li> til listen
+
+        inputField.value = ""; // Ryd inputfeltet
+    }
+});
+
+
+//knap som skrifter farven på baggrunden.
+const btn = document.createElement("button");
+btn.textContent = "Skift Baggrundsfarve";
+document.body.appendChild(btn);
+
+function random(number) {
+  return Math.floor(Math.random() * (number + 1));
+}
+
+function changeBackground() {
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+  document.body.style.backgroundColor = rndCol;
+}
+
+btn.addEventListener("click", changeBackground);
+
+//keydown event, virker npr man trykker på en key på tastaturet 
+const textBox = document.querySelector("#textBox");
+const output = document.querySelector("#output");
+textBox.addEventListener("keydown", (event) => {
+  output.textContent = `You pressed "${event.key}".`;
+}); 
+
